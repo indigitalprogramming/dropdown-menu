@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3954e72066.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Dropdown Menu | Indigital Programming</title>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu">
+            <ul class="menu-active">
+                <li>Home</li>
+                <li class="dropdown-container">
+                    <div class="active-drop">
+                        Configurações
+                        <i class="fa-solid fa-caret-up"></i> 
+                        <i class="fa-solid fa-caret-down hidden"></i>
+                    </div>
+                    <div class="dropdown">
+                        <ul>
+                            <li>Relatórios</li>
+                            <li>Mensagens</li>
+                            <li>Notificações</li>
+                            <li>Reuniões</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>Mensagens</li>
+                <li>Conta</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        
+        const activeDrop = document.querySelector('.active-drop')
+        const dropdown = document.querySelector('.dropdown')
+        const caretUp = document.querySelector('.fa-caret-up')
+        const caretDown = document.querySelector('.fa-caret-down')
+
+        activeDrop.addEventListener('click', () => {
+            dropdown.classList.toggle('active')
+            caretDown.classList.toggle('hidden')
+            caretUp.classList.toggle('hidden')
+        })
+        
+    </script>
+</body>
+</html>
